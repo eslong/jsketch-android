@@ -1,4 +1,4 @@
-README file for eslong (20503353) - CS 349, Assignment 3
+README file for eslong
 
 Files (src)
 	- MainActivity.java: Main activity for the app that handles all toggle buttons and radio buttons, and also handles the saving/restoring of data on orientation change
