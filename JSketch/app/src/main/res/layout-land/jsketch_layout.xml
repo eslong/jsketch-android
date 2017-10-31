@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#c8c8c8">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="460px"
+            android:layout_height="800px">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="3"
+                android:rowCount="3">
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn="SELECT"
+                    android:textOff="SELECT"
+                    android:id="@+id/btnSelect"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:onClick="handleSelectButton" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn="ERASE"
+                    android:textOff="ERASE"
+                    android:id="@+id/btnErase"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:onClick="handleEraseButton" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn="LINE"
+                    android:textOff="LINE"
+                    android:id="@+id/btnLine"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:onClick="handleLineButton" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn="RECT"
+                    android:textOff="RECT"
+                    android:id="@+id/btnRect"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:onClick="handleRectButton" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn="OVAL"
+                    android:textOff="OVAL"
+                    android:id="@+id/btnOval"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:onClick="handleOvalButton" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn="FILL"
+                    android:textOff="FILL"
+                    android:id="@+id/btnFill"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:onClick="handleFillButton" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnBlack"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:onClick="handlePaletteBlack"
+                    android:background="#000000" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnRed"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:onClick="handlePaletteRed"
+                    android:background="#ff0000" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnYellow"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:onClick="handlePaletteYellow"
+                    android:background="#ffff00" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnBlue"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:onClick="handlePaletteBlue"
+                    android:background="#0000ff" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnGreen"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:onClick="handlePaletteGreen"
+                    android:background="#00ff00" />
+
+                <ToggleButton
+                    android:layout_width="75dp"
+                    android:layout_height="65dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnOrange"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:onClick="handlePaletteOrange"
+                    android:background="#ffa600" />
+            </GridLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="59dp"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <RadioButton
+                        android:layout_width="150px"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:onClick="handleMinLine"
+                        android:id="@+id/rdbMinLine" />
+
+                    <RadioButton
+                        android:layout_width="150px"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:checked="true"
+                        android:onClick="handleMedLine"
+                        android:id="@+id/rdbMedLine" />
+
+                    <RadioButton
+                        android:layout_width="150px"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:onClick="handleMaxLine"
+                        android:id="@+id/rdbMaxLine" />
+                </LinearLayout>
+
+                <com.example.eslong.jsketch.LinePreview
+                    android:layout_width="150dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/linePreview"
+                    android:layout_gravity="center"
+                    android:background="#c8c8c8" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.example.eslong.jsketch.CanvasView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:id="@+id/canvasView"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

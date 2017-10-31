@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#c8c8c8">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|fill_vertical">
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn="SLCT"
+                    android:textOff="SLCT"
+                    android:id="@+id/btnSelect"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:onClick="handleSelectButton"
+                    android:layout_gravity="fill_vertical" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn="ERS"
+                    android:textOff="ERS"
+                    android:id="@+id/btnErase"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:onClick="handleEraseButton"
+                    android:layout_gravity="fill_vertical" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn="LINE"
+                    android:textOff="LINE"
+                    android:id="@+id/btnLine"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:onClick="handleLineButton"
+                    android:layout_gravity="fill_vertical" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn="RECT"
+                    android:textOff="RECT"
+                    android:id="@+id/btnRect"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:onClick="handleRectButton"
+                    android:layout_gravity="fill_vertical" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn="OVAL"
+                    android:textOff="OVAL"
+                    android:id="@+id/btnOval"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:onClick="handleOvalButton"
+                    android:layout_gravity="fill_vertical" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn="FILL"
+                    android:textOff="FILL"
+                    android:id="@+id/btnFill"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:onClick="handleFillButton"
+                    android:layout_gravity="fill_vertical" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_vertical">
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnBlack"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:onClick="handlePaletteBlack"
+                    android:background="#000000" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnRed"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:onClick="handlePaletteRed"
+                    android:background="#ff0000" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnYellow"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:onClick="handlePaletteYellow"
+                    android:background="#fef500" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnBlue"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:onClick="handlePaletteBlue"
+                    android:background="#0400ff" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnGreen"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:onClick="handlePaletteGreen"
+                    android:background="#37ff00" />
+
+                <ToggleButton
+                    android:layout_width="65dp"
+                    android:layout_height="75dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/btnOrange"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:onClick="handlePaletteOrange"
+                    android:background="#ffa600" />
+            </GridLayout>
+
+            <FrameLayout
+                android:layout_width="130dp"
+                android:layout_height="225dp">
+
+                <com.example.eslong.jsketch.LinePreview
+                    android:layout_width="wrap_content"
+                    android:layout_height="78dp"
+                    android:id="@+id/linePreview"
+                    android:background="#c8c8c8" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:onClick="handleMinLine"
+                        android:id="@+id/rdbMinLine" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:checked="true"
+                        android:onClick="handleMedLine"
+                        android:id="@+id/rdbMedLine" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:onClick="handleMaxLine"
+                        android:id="@+id/rdbMaxLine" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.example.eslong.jsketch.CanvasView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:id="@+id/canvasView"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>
